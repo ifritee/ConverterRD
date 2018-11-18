@@ -27,7 +27,6 @@ public class FileSystemActivity extends AppCompatActivity {
     private ListView FileSystemList_o;
     private  TextView FullPath_o;
     private String PathName_str;
-    private DAnswerOpenFile DAnswerOpenFile_o;
 
     private final int READ_EXTERNAL_STORAGE_PERMISSION_CODE = 1;
 
@@ -35,7 +34,6 @@ public class FileSystemActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        DAnswerOpenFile_o = new DAnswerOpenFile();
         setContentView(R.layout.activity_file_system);
         FileSystemList_o = findViewById(R.id.file_system);
         FileSystemList_o.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -72,9 +70,7 @@ public class FileSystemActivity extends AppCompatActivity {
                             });
                     AlertDialog AlertDialog_o = Dialog_o.create();
                     AlertDialog_o.show();
-
-//                    DAnswerOpenFile_o.show(getSupportFragmentManager(), "DAnswerOpenFile");
-                }
+                    }
             }
         });
         FullPath_o = findViewById(R.id.full_path);

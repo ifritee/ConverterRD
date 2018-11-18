@@ -9,18 +9,28 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ListView;
 import android.widget.Toast;
+
+import java.io.File;
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
     DialogFragment DialogAbout_o;
     static final private int FILE_SYS_ACTIVITY = 1;
+    private ListView MainList_o;
+    private ArrayList<File> ListItems_lst = new ArrayList<>();
+    private FileConvertAdapter FileConvertAdapter_o;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         DialogAbout_o = new DialogAbout();
+        MainList_o = findViewById(R.id.lvRDfiles);
+        FileConvertAdapter_o=new FileConvertAdapter(this, ListItems_lst);
+        MainList_o.setAdapter(FileConvertAdapter_o);
     }
 
     @Override
@@ -63,9 +73,10 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, data.getStringExtra("FileName"), Toast.LENGTH_SHORT).show();
         if(resultCode == RESULT_OK) {
             if(requestCode == FILE_SYS_ACTIVITY) {
+                ListItems_lst.add(new File(data.getStringExtra("FileName")));
+                FileConvertAdapter_o.notifyDataSetChanged();
                 Toast.makeText(this, data.getStringExtra("FileName"), Toast.LENGTH_SHORT).show();
             }
         }
-//
     }
 }
