@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">RDConverter</string>
+    <string name="dialog_about">О программе...</string>
+    <string name="dialog_answer_open_file">Открытие файла</string>
+    <string name="message_text">Эта программа предназначена для конвертации регистрационных файлов в БД. А также для проверки скорости работы БД SQLite на Android.</string>
+    <string name="close">Закрыть</string>
+    <string name="title_activity_file_system">Открыть файл</string>
+    <string name="directory_name">PATH:</string>
+    <string name="back_button">⇦</string>
+    <string name="sd_button">SD</string>
+    <string name="ext_button">EX</string>
+    <string name="aof_text">Открыть этот файл регистрации?</string>
+    <string name="aof_yes">Да</string>
+    <string name="aof_no">Нет</string>
+</resources>
