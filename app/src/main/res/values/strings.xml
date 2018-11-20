@@ -12,4 +12,5 @@
     <string name="aof_text">Открыть этот файл регистрации?</string>
     <string name="aof_yes">Да</string>
     <string name="aof_no">Нет</string>
+    <string name="title_coverter_activity">Обработка файа</string>
 </resources>

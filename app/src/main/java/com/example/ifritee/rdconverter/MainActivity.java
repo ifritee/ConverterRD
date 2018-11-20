@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -29,6 +30,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         DialogAbout_o = new DialogAbout();
         MainList_o = findViewById(R.id.lvRDfiles);
+        MainList_o.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Object clickItemObj = parent.getAdapter().getItem(position);
+                final File OpenFile_o = (File)clickItemObj;
+
+            }
+        });
         FileConvertAdapter_o=new FileConvertAdapter(this, ListItems_lst);
         MainList_o.setAdapter(FileConvertAdapter_o);
     }

@@ -23,6 +23,11 @@
             android:name=".FileSystemActivity"
             android:label="@string/title_activity_file_system"
             android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name=".ConverterActivity"
+            android:label="@string/title_coverter_activity"
+            android:theme="@style/AppTheme"></activity>
     </application>
+
 
 </manifest>

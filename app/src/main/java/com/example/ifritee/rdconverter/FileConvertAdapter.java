@@ -18,7 +18,6 @@ public class FileConvertAdapter extends BaseAdapter {
         this._Files_lst = Files_lst;
     }
 
-    /*private view holder class*/
     private class ViewHolder {
         TextView _TextViewFileArray_o;
 
